@@ -14,3 +14,5 @@ La boucle sur la commande "WIFSIGNALED" m'a donc permis de pouvoir tuer le signa
 ![whatever](termsig.png)
 ![whatever](sigkill.png)
 
+Dans la question 5 j'ai pu utilisé la commande clock_gettime, notamment avec cette ligne : 
+if (clock_gettime(CLOCK_MONOTONIC, start) == -1) 
