@@ -16,3 +16,10 @@ La boucle sur la commande "WIFSIGNALED" m'a donc permis de pouvoir tuer le signa
 
 Dans la question 5 j'ai pu utilisé la commande clock_gettime, notamment avec cette ligne : 
 if (clock_gettime(CLOCK_MONOTONIC, start) == -1) 
+qui permet d'obtenir l’heure actuelle et la stocker dans la variable start. On peut donc en déduire qu'il faudra faire la meme pour la variable de fin puis soustraire les deux.
+
+Pour la 6ème question, on travaille sur l'utilisation de la fonction strtok. Pour envoyer notre commande complexe j'ai alors pensé à faire une fonction qui sépare une commande complexe comme "ls -l" en "ls" et "-l".
+On remplace maintenant dans notre fonction : execlp(buf, buf,(char*) NULL) par execvp(argv[0], argv); qui permettra de alors de traiter les différents arguments de notre commande.
+Avec cela, on arrive à traiter des commandes complexe.
+
+J'ai essayé de résoudre la question 7, pendant un moment, cependant je n'ai pas réussi à trouver la solution. Le code que j'avais essayé est en commenté dans mon code.
